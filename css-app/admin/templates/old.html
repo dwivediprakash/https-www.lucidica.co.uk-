@@ -1,0 +1,49 @@
+		<div ng-controller="tableCtrl">
+			<div class="container">
+
+				<h1>Find a job</h1>
+				<input type="text" ng-model="find" class="form-control" placeholder="Type any information what are you looking for (job name, email, date, etc)"><br>
+
+				<h1>Table filters</h1>
+				<form class="form-inline">
+					<input type="text" class="form-control" ng-model="jobTitleSearch" placeholder="Job Title Search">
+					<input type="text" class="form-control" ng-model="engineerSearch" placeholder="Engineer Search">
+					<input type="text" class="form-control" ng-model="companySearch" placeholder="Company Search">
+					<input type="text" class="form-control rating" ng-model="cssRating" min="0" max="10" placeholder="CSS">
+					<input type="text" class="form-control rating" ng-model="npmRating" min="0" max="10" placeholder="NPM">
+					<input type="week" class="form-control" id="week" ng-model="week" ng-change="filterWeek()" placeholder="Date">
+				</form>
+
+				<h1>Table with results</h1>
+				<div class="table-responsive">
+					<table class="table table-hover table-bordered">
+						<tr>
+							<th>ID</th>
+							<th>Job Title</th>
+							<th>Engineer</th>
+							<th>Mail</th>
+							<th>Company</th>
+							<th>CSS</th>
+							<th>NPM</th>
+							<th>Comment</th>
+							<th>Timestamp</th>
+							<th>Preview</th>
+							<th>Remove</th>
+						</tr>
+						<tr ng-class="{ warning: record.engineer.length < 2, danger: record.mail == 'sharp131996@gmail.com' || record.mail.length < 2, hide: record.weekNumber != filteredWeek && filteredWeek, success: record.css.length > 0 && record.npm.length > 0 }" ng-repeat="record in customerRecords.data | filter: find | orderBy: '-timestamp' | filter: {job: jobTitleSearch} | filter: {engineer: engineerSearch} | filter: {company: companySearch} | filter: {css: cssRating} | filter: {npm: npmRating}">
+							<td>{{ record.id }}</td>
+							<td>{{ record.job }}</td>
+							<td>{{ record.engineer }}</td>
+							<td>{{ record.mail }}</td>
+							<td>{{ record.company }}</td>
+							<td>{{ record.css }}</td>
+							<td>{{ record.npm }}</td>
+							<td>{{ record.comment }}</td>
+							<td>{{ record.timestamp }}</td>
+							<td><a href="http://www.lucidica.com/css-app/index.php?key={{record.keyvalue}}" class="btn btn-primary" target="_blank">Preview</a></td>
+							<td><button type="button" class="btn btn-danger" ng-click="removeItem( record.id );">Remove</button></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>

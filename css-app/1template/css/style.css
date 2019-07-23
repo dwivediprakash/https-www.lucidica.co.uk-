@@ -1,0 +1,987 @@
+/* 
+1. START NAV MENU & SPYSCROLL & SCROLL TO
+2. START TYPED TEXT
+3. START SLIDER WITH SHIFT
+4. START ROTATION IMAGE
+5. START INTERACTIVE IMAGE
+6. START TABS
+7. START ACCORDION
+8. START ISOTOPE
+9. START MASONRY
+10. START PARALLAX
+11. START VIEWPORT CHECKER-->
+12. START FEEDBACK FORM
+13. START DIRECTIONAL HOVER
+16. START BUTTON UP
+17. START CALL TO ACTION AND MODAL
+18. START PRELOADER
+*/
+
+
+/* START FONT AWESOME */
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome/fontawesome-webfont.eot?v=4.6.3');
+  src: url('../fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'), url('../fonts/fontawesome/fontawesome-webfont.woff2?v=4.6.3') format('woff2'), url('../fonts/fontawesome/fontawesome-webfont.woff?v=4.6.3') format('woff'), url('../fonts/fontawesome/fontawesome-webfont.ttf?v=4.6.3') format('truetype'), url('../fonts/fontawesome/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-angle-double-up:before { content: "\f102"; }
+
+.fa-instagram:before { content: "\f16d"; }
+
+.fa-vk:before { content: "\f189"; }
+
+.fa-facebook:before { content: "\f09a"; }
+
+.fa-twitter:before { content: "\f099"; }
+
+.fa-envelope-o:before { content: "\f003"; }
+
+.fa-phone:before { content: "\f095"; }
+
+.fa-map-marker:before { content: "\f041"; }
+
+.fa-search:before { content: "\f002"; }
+
+.fa-shopping-cart:before { content: "\f07a"; }
+
+.fa-bars:before { content: "\f0c9"; }
+
+.fa-angle-right:before { content: "\f105"; }
+
+.fa-times:before { content: "\f00d"; }
+
+.fa-share-alt:before { content: "\f1e0"; }
+
+.fa-envelope:before { content: "\f0e0"; }
+
+.fa-long-arrow-right:before { content: "\f178"; }
+
+.fa-calendar-o:before { content: "\f133"; }
+
+/* END FONT AWESOME */
+
+
+
+
+
+
+/* START CSS RESET */
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+a,
+abbr,
+img,
+strong,
+sub,
+sup,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+aside,
+canvas,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+section,
+time,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  border: none;
+}
+
+ul,
+ol { list-style: none; }
+
+li { display: inline-block; }
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+input,
+textarea,
+select,
+button {
+  background: white;
+  border: none;
+  font-family: inherit;
+  resize: none;
+  vertical-align: middle;
+}
+
+:focus,
+:active { outline: none; }
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button { display: none; }
+
+input:-moz-placeholder { color: #999; }
+
+input::-webkit-input-placeholder { color: #999; }
+
+select,
+option { background: white; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input,
+textarea,
+button {
+  outline: none;
+  font-family: inherit;
+  resize: none;
+  box-sizing: border-box;
+  background: white;
+  border: none;
+}
+
+div,
+p { box-sizing: border-box; }
+
+#ho_adv { display: none !important; }
+
+.gallery-item { cursor: pointer; }
+
+/* END CSS RESET */
+
+
+
+
+
+
+/* START STYLES */
+
+body {
+	font-family: Verdana;
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+.ib { font-size: 0; }
+
+.ib > div,
+.ib > ul {
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: top;
+}
+
+.ib2 > div,
+.ib2 > ul { width: 50%; }
+
+.ib3 > div,
+.ib3 > ul { width: 33.33333%; }
+
+.ib4 > div,
+.ib4 > ul { width: 25%; }
+
+.ib5 > div,
+.ib5 > ul { width: 20%; }
+
+.ibm > div { vertical-align: middle; }
+
+.solid-text {
+  text-align: justify;
+  letter-spacing: .3px;
+}
+
+.w-90 {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.m-40 { margin: 40px auto; }
+
+.h2 {
+	text-align: center;
+	margin: 40px auto;
+	font-family: Verdana;
+}
+
+/* END STYLES */
+
+
+
+
+
+/* 1. START NAV MENU & SPYSCROLL & SCROLL TO */
+
+
+
+#calc-nav-wrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	z-index: 112;
+	background: #569fd3;
+}
+
+.nav li {
+	font-size: 16px;
+}
+
+.nav li a {
+	padding: 0;
+	display: block;
+	padding: 10px;
+	color: #fff;
+}
+
+.nav li.active a {
+	color: #000;;
+}
+
+/* END NAV MENU & SPYSCROLL & SCROLL TO */
+
+
+
+
+
+/* 2. START TYPED TEXT */
+
+#typed-text {
+	text-align: center;
+	height: 20px;
+}
+
+/* END TYPED TEXT */
+
+
+
+
+
+
+/* 3. START SLIDER WITH SHIFT */
+
+li.active { display: inline-block; }
+
+.owl-nav > div {
+	position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+	margin-top: -webkit-calc(31% - 20px);
+  margin-top: calc(-1% - 20px);
+	-webkit-transition: all .2s cubic-bezier(0.75, 0.02, 0.5, 1);
+  -moz-transition: all .2s cubic-bezier(0.75, 0.02, 0.5, 1);
+  -o-transition: all .2s cubic-bezier(0.75, 0.02, 0.5, 1);
+  transition: all .2s cubic-bezier(0.75, 0.02, 0.5, 1);
+	z-index: 2;
+	background: #61a4d7;
+	font-size: 0;
+}
+
+.owl-prev { left: 0; }
+
+.owl-next {
+	right: 0;
+}
+
+.owl-dots {
+	position: absolute;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  line-height: 1;
+	top: 0;
+	margin-top: -webkit-calc(33% + 20px);
+  margin-top: calc(33% + 20px);
+	z-index: 2;
+}
+
+.owl-dot {
+	display: inline-block;
+	cursor: pointer;
+}
+
+.owl-dot span {
+	display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 8px;
+  cursor: pointer;
+	-webkit-transition: all .2s cubic-bezier(0.75, 0.02, 0.5, 1);
+  -moz-transition: all .2s cubic-bezier(0.75, 0.02, 0.5, 1);
+  -o-transition: all .2s cubic-bezier(0.75, 0.02, 0.5, 1);
+  transition: all .2s cubic-bezier(0.75, 0.02, 0.5, 1);
+	background: #fff;
+	border-radius: 50px;
+}
+
+.owl-dot.active { display: inline-block; }
+
+.owl-dot.active span { background: #61a4d7; }
+
+/* END SLIDER WITH SHIFT */
+
+
+
+
+
+
+/* 4. START ROTATION IMAGE */
+
+.rotator:before,
+.rotator:after {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	margin: -15px 0 0 0;
+	left: -35px;
+	content: '';
+	border-top: 5px solid rgba(255, 255, 255, .1);
+	border-left: 5px solid rgba(255, 255, 255, .1);
+	border-bottom: 5px solid rgba(255, 255, 255, .1);
+	cursor: move;
+	background: #61a4d7;
+}
+
+.rotator:after {
+	left: 0;
+	border-right: 5px solid rgba(255, 255, 255, .1);
+	border-left: none;
+}
+
+.rotation-image-container {
+  display: block;
+  height: 100%;
+  width: 100%;
+	position: relative;
+}
+
+.rotation-image-container img {
+	opacity: 0;
+	width: 100%;
+	margin: 0 0 25px 0;
+}
+
+.rotation-image {
+  height: 100%;
+  width: 100%;
+  display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#rotation-image-slider { font-size: 0; }
+
+.rotation {
+  background: #6d7579;
+  width: 70%;
+  height: 1px;
+  margin: 5px;
+	margin: 0 auto;
+}
+
+.rotator {
+  width: 1px;
+  height: 1px;
+  position: relative;
+  left: 10px;
+  top: -5px;
+  cursor: pointer;
+}
+
+.rotation-image {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: none;
+}
+
+.active { display: block; }
+
+/* END ROTATION IMAGE */
+
+
+
+
+
+
+/* 5. START INTERACTIVE IMAGE */
+
+.switcher {
+  width: 100%;
+  height: 100%;
+	position: absolute;
+	top: 0;
+	overflow: hidden;
+}
+
+.thumb {
+  width: 1px;
+  height: 100%;
+  border-radius: 3px;
+  position: relative;
+  left: 50%;
+  background: #6d7579;
+  cursor: pointer;
+	z-index: 2;
+}
+
+.thumb:before,
+.thumb:after {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	margin: -15px 0 0 0;
+	left: -35px;
+	content: '';
+	border-top: 5px solid rgba(255, 255, 255, .1);
+	border-left: 5px solid rgba(255, 255, 255, .1);
+	border-bottom: 5px solid rgba(255, 255, 255, .1);
+	cursor: move;
+	background: #61a4d7;
+}
+
+.thumb:after {
+	left: 0;
+	border-right: 5px solid rgba(255, 255, 255, .1);
+	border-left: none;
+}
+
+.interactive-image {
+	width: 100%;
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.modal .interactive-image2 { width: 100%; }
+
+.interactive-image img {
+  z-index: -1;
+  opacity: 0;
+  width: 100%;
+}
+
+.interactive-image-img1,
+.interactive-image-img2 {
+	position: absolute;
+  background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 2;
+	width: 50%;
+	height: 100%;
+	left: 0;
+}
+
+.interactive-image-img2 {
+  background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+}
+
+/* END INTERACTIVE IMAGE */
+
+
+
+
+
+/* 6. START TABS */
+
+.main-tabs {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.main-tabs div span {
+  text-transform: uppercase;
+  margin: 0 20px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all .3s ease;
+  padding: 0 0 5px 0;
+}
+
+.main-tabs .active span { border-bottom-color: #569fd3; }
+
+.main-tabs-content > div {
+  opacity: 1;
+  position: relative;
+  top: 0;
+  animation: fade .5s ease;
+}
+
+@keyframes fade {
+  0% {
+  	opacity: 0;
+  	top: 10px;
+  }
+  100% {
+  	opacity: 1;
+  	top: 0;
+  }
+}
+
+.tabs div { cursor: pointer; }
+
+.tabs-content > div { display: none; }
+
+.tabs-content .active { display: block; }
+
+/* END TABS */
+
+
+
+
+/* 7. START ACCORDION */
+
+.accordion-block {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #f5f5f5;
+}
+
+.accordion-block > .accordion-button {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
+  -webkit-transition:all 0.2s linear;
+  -moz-transition:all 0.2s linear;
+  transition:all 0.2s linear;
+  cursor: pointer;
+}
+
+.accordion-block > .accordion-button.active {
+  background-color: #3399cc;
+  color: #fff;
+}
+
+.accordion-content {
+  position: relative;
+  width: 100%;
+  font-size: 15px;
+  height: auto;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  display:none;
+}
+
+.accordion-content {
+  padding: 10px 15px;
+  margin: 0;
+  color: #333;
+}
+
+/* END ACCORDION */
+
+
+
+
+/* 8. START ISOTOPE */
+
+#filters-isotope button {
+	font-size: 16px;
+	background: #569fd3;
+	color: #fff;
+	padding: 10px;
+	cursor: pointer;
+	transition: all .3s ease;
+	margin: 0 0 10px 0;
+}
+
+#filters-isotope button:hover,
+#filters-isotope button.active {
+	background: #0077b5;
+	display: inline-block;
+}
+
+#grid-isotope > div {
+	width: 33%;
+	height: 100px;
+	border: 1px solid #fff;
+}
+
+#grid-isotope > .red { background: #FF0000; }
+
+#grid-isotope > .green { background: #00FF00; }
+
+#grid-isotope > .blue { background: #0000FF; }
+
+/* END ISOTOPE */
+
+
+
+
+
+
+/* 9. START MASONRY */
+
+.grid { background: #DDD; }
+
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid-sizer,
+.grid-item { width: 33.333%; }
+
+.grid-item { float: left; }
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
+
+/* END MASONRY */
+
+
+
+
+
+
+/* START 10. PARALLAX */
+
+#parallax {
+	background: url(../img/parallax.jpg);
+	background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+	height: 500px;
+}
+
+/* END PARALLAX */
+
+
+
+
+
+
+/* 11. START VIEWPORT CHECKER */
+
+.vc div {
+	height: 300px;
+	background: #61a4d7;
+	transition: all .3s ease;
+	transform: scale(0);
+}
+
+.vc div:nth-child(2) {
+	transition-delay: .3s;
+	background: #03b4c4;
+}
+
+.vc div:last-child {
+	transition-delay: .6s;
+	background: #118b97;
+}
+
+.vc div.active {
+	transform: scale(1);
+}
+
+/* END VIEWPORT CHECKER */
+
+
+
+
+
+
+/* 12. START FEEDBACK FORM */
+
+.feedback-form {
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	margin: 0 0 10px 0;
+	padding: 10px;
+	font-family: inherit;
+	border: 1px solid #61a4d7;
+	transition: all .3s ease;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+	box-shadow: 0px 3px 22px 0px rgba(97, 164, 215, 0.3);
+}
+
+#feedback-button {
+	width: 200px;
+	margin: 30px auto;
+	padding: 10px 20px;
+	cursor: pointer;
+	border: 1px solid #61a4d7;
+	transition: all .3s ease;
+}
+
+#feedback-button:hover {
+	color: #fff;
+	background: #61a4d7;
+}
+
+/* END FEEDBACK FORM */
+
+
+
+
+
+
+/* 13. START DIRECTIONAL HOVER */
+
+#dh {
+	width: 984px;
+	height: 600px;
+	position: relative;
+	margin: 20px auto;
+	padding: 0;
+}
+
+#dh li {
+	float: left;
+	margin: 5px;
+	background: #fff;
+	padding: 8px;
+	position: relative;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+}
+
+#dh li a,
+#dh li a img {
+	display: block;
+	position: relative;
+}
+
+#dh li a { overflow: hidden; }
+
+#dh li a div {
+	position: absolute;
+	background: #333;
+	background: rgba(75, 75, 75, .7);
+	width: 100%;
+	height: 100%;
+}
+
+#dh li a div span {
+	display: block;
+	padding: 10px 0;
+	margin: 40px 20px 20px 20px;
+	text-transform: uppercase;
+	font-weight: normal;
+	color: rgba(255, 255, 255, .9);
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+	border-bottom: 1px solid rgba(255, 255, 255, .5);
+	box-shadow: 0 1px 0 rgba(0, 0, 0, .1), 0 -10px 0 rgba(255, 255, 255, .3);
+}
+
+/* END DIRECTIONAL HOVER */
+
+
+
+
+
+
+/* 16. START BUTTON UP */
+
+#button-up {
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	width: 40px;
+	height: 40px;
+	background: #61a4d7;
+	display: block;
+	cursor: pointer;
+	z-index: 20;
+	display: none;
+}
+
+#button-up:after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	content: '\f062';
+	font-family: FontAwesome;
+	color: #fff;
+	font-size: 14px;
+	transition: all .3s ease;
+}
+
+#button-up:hover:after { top: 45%; }
+
+/* END BUTTON UP */
+
+
+
+
+
+
+/* 17. START CALL TO ACTION AND MODAL */
+
+#button-action {
+	position: fixed;
+	left: 30px;
+	bottom: 30px;
+	width: 50px;
+	height: 50px;
+	background: #61a4d7;
+	display: block;
+	cursor: pointer;
+	z-index: 20;
+	border-radius: 50px;
+}
+
+#button-action:after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	content: '\f095';
+	font-family: FontAwesome;
+	color: #fff;
+	font-size: 20px;
+	transition: all .3s ease;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 30;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+	position: relative;
+}
+
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* END CALL TO ACTION AND MODAL */
+
+
+
+
+
+
+/* 18. START PRELOADER */
+
+#page-preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 1000;
+}
+
+#page-preloader span {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: url(https://digitalsynopsis.com/wp-content/uploads/2016/06/loading-animations-preloader-gifs-ui-ux-effects-18.gif) no-repeat 50% 50%;
+  margin: -75px 0 0 -75px;
+}
+
+/* END PRELOADER */

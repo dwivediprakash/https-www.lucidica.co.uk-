@@ -1,0 +1,25 @@
+.path.active {
+	animation: color 1.5s ease-in;
+	fill: #003768;
+}
+
+@keyframes color {
+	0% { fill: #fff; }
+	33% { fill: #003768; }
+	66% { fill: #569fd3; }
+	100% { fill: #003768; }
+}
+
+.path-last.active {
+	animation: color2 1.5s ease-in;
+	fill: #569fd3;
+}
+
+@keyframes color2 {
+	0% { fill: #fff; }
+	33% { fill: #569fd3; }
+	66% { fill: #003768; }
+	100% { fill: #569fd3; }
+}
+
+.squiggle-container { display: none; }

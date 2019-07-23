@@ -1,0 +1,361 @@
+@charset "UTF-8";
+/*
+Offers Section
+ */
+.offers-compare {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 40px; }
+
+.offers-compare:before {
+  content: 'VS';
+  display: block;
+  position: absolute;
+  top: 20%;
+  right: 0;
+  /*bottom: 0;*/
+  left: 0;
+  margin: auto;
+  width: 70px;
+  height: 40px;
+  background: #0b2b47;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 27px;
+  font-style: italic; }
+
+.offer {
+  width: calc(100%/2 - 20px);
+  border: 1px solid #0b2b47;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden; }
+
+.offer .heading {
+  position: relative;
+  background: #0b2b47;
+  height: 40px;
+  margin-bottom: 110px; }
+
+.offer .heading:before {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  content: '';
+  display: block;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: lightgrey; }
+
+.offer .heading:after {
+  position: absolute;
+  top: 12px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  content: '';
+  display: block;
+  width: 120px;
+  height: 120px; }
+
+.offer .heading.platinum:after {
+  background: url("https://lucidica.co.uk/wp-content/themes/lucidica/img/stars/platinum.png") no-repeat center;
+  background-size: contain; }
+
+.offer .heading.gold:after {
+  background: url("https://lucidica.co.uk/wp-content/themes/lucidica/img/stars/gold.png") no-repeat center;
+  background-size: contain; }
+
+.offer .heading.silver:after {
+  background: url("https://lucidica.co.uk/wp-content/themes/lucidica/img/stars/silver.png") no-repeat center;
+  background-size: contain; }
+
+.offer .heading.bronze:after {
+  background: url("https://lucidica.co.uk/wp-content/themes/lucidica/img/stars/bronze.png") no-repeat center;
+  background-size: contain; }
+
+.offer .title, .offer ul, .offer p {
+  padding: 0 30px; }
+
+.offer .title {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 23px;
+  margin-bottom: 20px; }
+
+.offer .title:after {
+  content: '';
+  display: block;
+  width: 70%;
+  height: 3px;
+  margin: auto;
+  background: #0b2b47; }
+
+.offer p:first-of-type {
+  font-weight: 400;
+  font-size: 17px;
+  font-style: italic; }
+
+.offer ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column; }
+
+.offer ul li {
+  display: inline-block;
+  padding-left: 10px; }
+
+.offer ul li:before {
+  position: relative;
+  right: 4px;
+  bottom: 3px;
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #0b2b47; }
+
+.refurbished_products {
+  text-align: center;
+  font-size: 19px; }
+
+.progressbar__icons {
+  display: flex;
+  justify-content: space-between; }
+
+.progressbar__icon {
+  width: calc(100% / 7 - 10px); }
+  .progressbar__icon:hover {
+    cursor: pointer; }
+  .progressbar__icon img {
+    width: 80%;
+    height: auto; }
+  .progressbar__icon.selected + .progressbar__icon {
+    -webkit-animation-name: flash;
+    animation-name: flash;
+    animation-iteration-count: infinite;
+    animation-duration: 8s; }
+
+.progressbar__bar {
+  margin: 20px auto;
+  width: 88%;
+  height: 10px;
+  border-radius: 2px;
+  border: 1px solid lightgrey; }
+
+.progressbar__description {
+  text-align: center; }
+
+.progressbar__bar-fill {
+  height: 100%;
+  width: 0;
+  background: #ff4000;
+  border-radius: 2px;
+  transition: all .4s ease;
+  position: relative; }
+
+.progressbar__description ul {
+  list-style-type: none;
+  counter-reset: section; }
+  .progressbar__description ul li {
+    font-size: 20px;
+    margin-bottom: 10px;
+    opacity: 0;
+    transition: all .4s ease;
+    font-weight: 400; }
+    .progressbar__description ul li:before {
+      counter-increment: section;
+      content: counter(section) ". ";
+      display: inline-block; }
+    .progressbar__description ul li.current {
+      color: #ff4000; }
+    .progressbar__description ul li.visible {
+      opacity: 1; }
+    .progressbar__description ul li:first-of-type {
+      opacity: 1; }
+
+.additionally {
+  display: flex;
+  align-items: stretch; }
+
+.check-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  height: 100%; }
+  .check-list li {
+    flex-grow: 1;
+    position: relative;
+    text-align: left; }
+    .check-list li:before {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 30px;
+      background: url("https://www.lucidica.co.uk/wp-content/themes/lucidica/img/icon-tick-small-orange.svg") no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: -6px;
+      left: -30px; }
+
+.check-list_info {
+  align-items: center; }
+  .check-list_info li {
+    margin-bottom: 10px; }
+
+.faq-section h3 {
+  margin: 0 0 22px 0;
+  padding: 22px 0 0 0;
+  transition: all .2s ease; }
+  .faq-section h3:hover {
+    cursor: pointer;
+    color: #ff4000; }
+
+@keyframes flash {
+  from,
+    15%,
+    25%,
+    35%,
+    to {
+    opacity: 1; }
+  20%,
+    30% {
+    opacity: 0; } }
+@media screen and (max-width: 767px) {
+  .offers-compare {
+    justify-content: center;
+    flex-wrap: wrap; }
+    .offers-compare:before {
+      display: none; }
+
+  .offer {
+    width: calc(100% - 40px); }
+    .offer:first-of-type {
+      margin-bottom: 40px; }
+
+  .additionally {
+    flex-wrap: wrap; }
+    .additionally .two-col {
+      width: 100%;
+      padding: 0 8%; }
+
+  .check-list {
+    align-items: flex-start;
+    padding-left: 20px; }
+
+  .progressbar__icons, .progressbar__bar {
+    display: none; }
+
+  .progressbar__description ul {
+    padding: 0; }
+    .progressbar__description ul li {
+      opacity: 1; }
+      .progressbar__description ul li.current {
+        color: unset; } }
+.calculator {
+  background: #56adf1; }
+
+.web-calculator {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch; }
+  .web-calculator h5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    margin-top: 0;
+    margin-bottom: 15px;
+    min-height: 2.5em; }
+
+.web-calculator__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 50%;
+  padding: 0 20px;
+  margin-bottom: 30px; }
+
+.web-calculator__checkbox, .web-calculator__radio {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 19px; }
+  .web-calculator__checkbox:hover, .web-calculator__radio:hover {
+    cursor: pointer; }
+  .web-calculator__checkbox input, .web-calculator__radio input {
+    display: none; }
+  .web-calculator__checkbox span:first-of-type, .web-calculator__radio span:first-of-type {
+    text-align: left; }
+  .web-calculator__checkbox span.switcher, .web-calculator__radio span.switcher {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    min-width: 50px;
+    height: 30px;
+    border-radius: 30px;
+    background: #FFFFFF;
+    transition: all 0.2s ease; }
+    .web-calculator__checkbox span.switcher:before, .web-calculator__radio span.switcher:before {
+      content: '';
+      display: block;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      position: absolute;
+      left: 2px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background: #ff4000;
+      transition: all 0.2s ease; }
+  .web-calculator__checkbox input:checked + span.switcher, .web-calculator__radio input:checked + span.switcher {
+    background: #FFFFFF; }
+    .web-calculator__checkbox input:checked + span.switcher:before, .web-calculator__radio input:checked + span.switcher:before {
+      left: 22px;
+      background: #56adf1; }
+
+.web-calculator__input {
+  font-weight: 500;
+  font-size: 19px; }
+  .web-calculator__input input {
+    width: 100%;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px; }
+
+.estimate-price, .submit {
+  width: 100%; }
+
+.submit h4 {
+  opacity: 0; }
+.submit button:disabled {
+  background-color: darkgrey;
+  cursor: not-allowed; }
+.submit button:disabled + h4 {
+  opacity: 1; }
+
+@media screen and (max-width: 600px) {
+  .web-calculator__section {
+    width: 100%; }
+
+  .estimate-price .web-calculator__section:nth-last-child(2) {
+    margin-bottom: 0; } }
+
+/*# sourceMappingURL=it-support-contracts.css.map */

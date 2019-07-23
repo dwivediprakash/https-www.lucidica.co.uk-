@@ -1,0 +1,26 @@
+User-Agent: *
+Disallow: /newsletter/
+Disallow: /cgi-bin
+Disallow: /product-category
+Disallow: /product-category/
+Disallow: /*?*
+Disallow: */comments
+Disallow: /page/
+Disallow: */trackback
+Disallow: */feed
+Disallow: */embed
+Disallow: /attachment/
+Disallow: /wp-
+Allow: /*/*.js
+Allow: /*/*.css
+Allow: /wp-*.png
+Allow: /wp-*.jpg
+Allow: /wp-*.jpeg
+Allow: /wp-*.gif
+Allow: /wp-*.svg
+Disallow: /geekisthenewsexy/
+Disallow: /blog/tag/*
+Disallow: /help/category/*
+Disallow: /help/page/*
+
+Sitemap: https://www.lucidica.co.uk/sitemap_index.xml

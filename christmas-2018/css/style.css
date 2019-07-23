@@ -1,0 +1,177 @@
+/* -- Font face -- */
+@font-face {
+    font-family: 'Chunk Five';
+    src: url('chunkfive-webfont.eot');
+    src: url('chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
+         url('chunkfive-webfont.woff') format('woff'),
+         url('chunkfive-webfont.ttf') format('truetype'),
+         url('chunkfive-webfont.svg#ChunkFiveRoman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* -- Basic resets -- */
+*{padding:0px;margin:0px;outline:none;}
+a>img{border:none;}
+header,section,footer{display:block;}
+
+/* -- General styles -- */
+*{
+    font-family: Open Sans, sans-serif !important;
+}
+body{background:#ab0000;font-size:12px;font-family:Arial,helvetica,serif,sans-serif;}
+
+header{position:relative;max-height:632px;background:url(../images/bg-header.jpg) no-repeat center;z-index:1;}
+header h1{padding-top:40px;text-align:center;}
+header h1 img{display:block;width:100%;max-width:759px;margin:auto;}
+header h2{margin-top:50px;color:#fff;font-family:Georgia,sans-serif;font-weight:normal;font-size:2em;text-align:center;}
+
+footer {border-top:1px solid #516605;background:#192000;}  
+
+.clear{clear:both;}
+
+/* -- Grid styles -- */
+.main {width:92%;margin-left:4%;margin-right:4%;}
+.col1,.col3{position:relative;margin-left:1%;margin-right:1%;}
+.col1{width:31.3%;display:inline;float:left;}
+/*.col2{width:64.667%;margin:auto;}*/
+.col2{width:95%;margin:auto;}
+.col3{width:98%;}
+
+/* -- Layers -- */
+.trees {position:absolute;bottom:0px;width:100%;height:169px;background:url(../images/trees.png) repeat-x center;z-index:-1;}
+.sg-layer {height:17px;background:url(../images/sg-layer.png) repeat-x;}
+
+/* -- Promotion picture / slider -- */
+.blueberry {position:relative;height:375px;margin:0px auto; margin-top:70px;}
+.blueberry .slides {position:relative;display:none;min-height:200px;overflow: hidden;}
+.blueberry .slides li {position:absolute;display:block;width:100%;text-align:center;top: 0;left: 0;overflow: hidden;}
+.blueberry .slides li span {display:none;}
+/*.blueberry .slides li img {display: block;margin-left:auto;margin-right:auto;}*/
+.blueberry .slides li img {
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+}
+.blueberry .slides li.active {display:block;position:relative;}
+
+.arrow_left,.arrow_right{position:absolute;top:25%;cursor:pointer;}
+.arrow_left{left:-40px;}
+.arrow_right{right:-40px;}
+
+/* -- Snow - price - buy now area -- */
+.snow{background:#eaf8f9;padding:60px 0px 30px 0px;}
+.snow h3{text-align:center;margin-bottom:20px;color:#383838;font-size:1.75em;font-family:Georgia;}
+/*.product-title{min-height:55px;}*/
+.product-link a{
+    color: #000;
+}
+.product-title span,
+.product-title-second span{
+    color: #105A38;
+}
+.price-buy{width:650px;margin:auto;}
+.price{float:left;width:371px;height:88px;line-height:115px;margin-right:30px;text-align:right;padding-right:30px;color:#383838;margin:auto;text-shadow:1px 1px 1px #fff;font-family:"Chunk Five";font-size:2.91em;font-weight:normal;background:url(../images/bg-price.jpg) no-repeat;}
+.btn-buy-now{float:left;display:block;width:229px;height:76px;margin:12px auto;line-height:85px;text-align:center;font-size:1.5em;color:#fff;text-shadow:0px 0px 1px #BC5286;font-weight:bold;text-decoration:none;background:url(../images/btn-buy-now.jpg) no-repeat;}
+
+/* -- Additional info area -- */
+.info {background:url(../images/bg-info.jpg) repeat;color:#dbfad8;}
+.widget h4{position:relative;padding-left:45px;margin-bottom:15px;font-size:1.66em;font-weight:bold;text-shadow:0px 1px 1px #053E21;}
+.widget h4 img{position:absolute;left:0px;top:-6px;margin-right:10px;vertical-align:bottom;}
+.widget h5 {margin-bottom:15px;margin-top:0px;font-size:1.3em;font-weight:normal;}
+.widget p{line-height:1.4em;margin-bottom:10px;
+    font-size: 15px;}
+
+.widget {margin:40px 0px;max-width:350px;}
+
+#subscribe{margin:20px 0px;}
+#subscribe .email{float:left;width:168px;height:33px;margin-right:10px;padding:0px 10px;color:#fff;border:none;background:none;background:url(../images/bg-subscribe.png) no-repeat;}
+#subscribe .submit{float:left;width:81px;height:32px;margin-top:2px;cursor:pointer;border:none;background:url(../images/btn-submit.png) no-repeat;}
+
+
+/* -- Footer -- */
+.footer{padding:15px 0px;color:#435505;font-weight:bold;text-align:center;text-transform:uppercase;}
+.footer_links h4 a{
+    color: #dbfad8;
+}
+/* -- Twitter Styles -- */
+#twitter_update_list{list-style:none;}
+#twitter_update_list li {margin-bottom:15px;}
+#twitter_update_list li span{line-height:1.4em;}
+#twitter_update_list li a{color:#00e06c;text-decoration:none;}
+
+/* -- Responsive styles -- */
+@media(max-width:1100px){
+  .price-buy{width:405px;} 
+  .btn-buy-now{float:default;margin-left:88px;}   
+}
+@media(max-width:768px){
+  header h2{font-size:1.75em;padding-top:20px;}
+    .col2{
+        width: 85%;
+    }
+    .price{
+        width: 100%;
+        margin-right: 0;
+        padding-right: 0;
+    }
+    .blueberry .slides li img{
+        /*max-width: fill-available;*/
+        display: block;
+        max-width: 100% !important;
+        height: auto;
+    }
+}
+@media(max-width:600px){
+    .col1{
+        width: 100%;
+    }
+    .widget{
+        margin: 10px auto;
+    }
+}
+@media(max-width:480px){
+  .col1{width:98%;}
+    header h2{
+        font-size: 1.3em;
+    }
+    .snow .main{margin: 0;width:100%;}
+    .snow .main .col2{width:100%;}
+    .price{height:105px;background:url(../images/bg-price-small.jpg) no-repeat;width:100%;
+        background-position: center; background-size: contain;}
+    .price-buy {width: 100%;}
+    .btn-buy-now{
+        width: 100%;
+        background-position: center;
+        margin-left: 0;
+    }
+    .blueberry{
+        height: 240px;
+    }
+    .arrow_left{
+        left: -23px;
+    }
+    .arrow_left img,
+    .arrow_right img{
+        width: 80%;
+    }
+    .arrow_right {
+        right: -30px;
+    }
+    .trees{
+        background: url(../images/trees.png) repeat-x 188px;
+    }
+}
+@media(max-width:320px){
+  header{max-height:550px;}
+  header h2{font-size:1.25em;padding-top:20px;}
+  .arrow_left img, .arrow_right img{width:20px;}
+  .arrow_left{left:-12px;}
+  .arrow_right{right:-12px;}
+  .col1,.col2{width:98%;}
+  .snow h3{font-size:1.5em;}
+  .price-buy{width:100%;}
+  .price{width:100%;height:115px;background:url(../images/bg-price-small.jpg) no-repeat center;font-size:2.3em;line-height:95px;background-size: contain;}
+  /*.btn-buy-now{margin-left:25px;}*/
+}

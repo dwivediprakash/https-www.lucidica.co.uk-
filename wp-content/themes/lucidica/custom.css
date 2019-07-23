@@ -1,0 +1,601 @@
+.page-template-template-cv #main { background: #61A4D7 !important; }
+
+
+
+/* START CALENDAR */
+
+
+
+#tribe-events-content .tribe-events-cal-links,
+
+#tribe-events-content a.tribe-events-button,
+
+.addthis_toolbox,
+
+.tribe-events-schedule,
+
+#tribe-events-footer,
+
+.tribe_events-template-default .tribe-events-before-html { display: none !important; }
+
+
+
+#tribe-bar-form input[type=text]:focus,
+
+#tribe-bar-form input[type=text]:hover {
+
+  outline: none !important;
+
+  cursor: pointer;
+
+}
+
+
+
+.tribe-events-event-meta .tribe-events-meta-group { padding: 0; }
+
+
+
+.tribe-events-abbr { text-decoration: none; }
+
+
+
+.tribe-events-meta-group dl {
+
+  font-size: 16px;
+
+  margin: 0 0 5px 0;
+
+}
+
+
+
+.tribe-events-meta-group dd {
+
+  font-size: 15px;
+
+}
+
+
+
+.tribe-events-meta-group h3.tribe-events-single-section-title { font-size: 19px; }
+
+
+
+.tribe-bar-disabled { top: -4px; }
+
+
+
+h2.tribe-events-page-title { margin: 16px 0; }
+
+
+
+body #tribe-events-content {
+
+  top: -25px;
+
+  margin-bottom: 0;
+
+}
+
+
+
+.events-archive div.entry-content {
+
+  padding: 0;
+
+  margin: 30px 0 0 0;
+
+}
+
+
+
+/* END CALENDAR */
+
+
+
+/* START ABOUT AUTHOR */
+
+
+
+.author-info { display: none; }
+
+
+
+#about-author {
+
+  font-size: 0;
+
+  padding: 20px; }
+
+
+
+#about-author > a,
+
+#about-author > div {
+
+  display: inline-block;
+
+  vertical-align: top; }
+
+
+
+#about-author > a {
+
+  margin: 0 20px 0 0; }
+
+
+
+#about-author > div {
+
+  width: 80%;
+
+  font-size: 16px; }
+
+  #about-author > div p {
+
+    margin: 0 0 10px 0; }
+
+  #about-author > div .name a {
+
+    font-size: 20px;
+
+    font-weight: bold; }
+
+  #about-author > div .post {
+
+    font-style: italic; }
+
+
+
+@media only screen and (max-width: 768px), only screen and (max-device-width: 768px) {
+
+  #about-author > a {
+
+    display: block;
+
+    text-align: center;
+
+    width: 100%; }
+
+  #about-author > div { width: 100%; } }
+
+
+
+/* END ABOUT AUTHOR */
+
+
+
+
+
+#addit-inf { margin: 31px 0 0 0; }
+
+
+
+.blue { color: #003768; }
+
+
+
+.ib,
+
+ul {
+
+  font-size: 0;
+
+  margin: 0 -20px;
+
+}
+
+
+
+.heading-main {
+
+  margin: 0 0 28px 0;
+
+}
+
+
+
+.ib > div {
+
+  display: inline-block;
+
+  font-size: 16px;
+
+  vertical-align: top; }
+
+
+
+.ib2 > div {
+
+  width: 50%;
+
+  padding: 0 20px;
+
+}
+
+
+
+.ib > div:last-child { margin: 68px 0 0 0; }
+
+
+
+@media only screen and (max-width : 768px),
+
+only screen and (max-device-width : 768px) {
+
+  .ib2 > div { width: 100%; }
+
+
+
+  .ib > div:last-child { margin: 0; }
+
+}
+
+
+
+
+
+/* START CV */
+
+
+
+.ib {
+
+  font-size: 0;
+
+}
+
+
+
+.ib > div {
+
+  display: inline-block;
+
+  vertical-align: top;
+
+  box-sizing: border-box;
+
+}
+
+
+
+.ib2 > div { width: 50%; }
+
+
+
+.ib3 > div { width: 33.33333%; }
+
+
+
+.ib4 > div { width: 25%; }
+
+
+
+.ib5 > div { width: 20%; }
+
+
+
+#cv-wrap {
+
+  text-align: center;
+
+  width: 100%;
+
+}
+
+
+
+#cv {
+
+  width: 90%;
+
+  max-width: 1024px;
+
+  margin: 0 -20px;
+
+  display: inline-block;
+
+}
+
+
+
+#cv > div {
+
+  padding: 0 20px;
+
+  margin: 40px 0;
+
+  cursor: pointer;
+
+  position: relative;
+
+}
+
+
+
+.available:after {
+
+  content: '';
+
+  position: absolute;
+
+  top: -55px;
+
+  right: 0;
+
+  background: url(/wp-content/themes/lucidica/images/opa.png) center no-repeat;
+
+  width: 190px;
+
+  height: 123px;
+
+}
+
+
+
+#cv > div img {
+
+  height: 95px;
+
+  width: auto;
+
+  display: block;
+
+  margin: auto;
+
+}
+
+
+
+#cv > div h3 {
+
+  padding: 0;
+
+  margin: 10px 0 0 0;
+
+  color: #ff7900;
+
+}
+
+
+
+@media only screen and (max-width: 768px),
+
+only screen and (max-device-width: 768px) {
+
+  #cv > div {
+
+    width: 100%;
+
+  }
+
+}
+
+
+
+/* START CALL TO ACTION AND MODAL */
+
+
+
+.modal {
+
+  display: none;
+
+  position: fixed;
+
+  z-index: 30;
+
+  left: 0;
+
+  top: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  overflow: auto;
+
+  background-color: rgb(0,0,0);
+
+  background-color: rgba(0,0,0,.4);
+
+  z-index: 1111;
+
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+
+}
+
+
+
+.cv-title-text,
+
+.cv-description-text { display: none; }
+
+
+
+.modal-content {
+
+  background-color: #ff9248;
+
+  padding: 40px;
+
+  border: 1px solid #888;
+
+  width: 90%;
+
+  max-width: 960px;
+
+  position: relative;
+
+  left: 50%;
+
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  color: #fff;
+
+}
+
+
+
+.close {
+
+  position: absolute;
+
+  top: 20px;
+
+  right: 20px;
+
+  background: url(/wp-content/themes/lucidica/images/link-close-cross-white.png) no-repeat;
+
+  width: 54px;
+
+  height: 54px;
+
+  cursor: pointer;
+
+}
+
+
+
+.cv-modal-title {
+
+  width: 40%;
+
+  padding: 0 20px 0 0;
+
+}
+
+
+
+.cv-modal-title h3 {
+
+  font-size: 48px;
+
+  padding: 0 0 36px 0;
+
+  margin: 0;
+
+  color: #fff;
+
+}
+
+
+
+.cv-modal-title p {
+
+  font-size: 28px;
+
+  line-height: 1.1;
+
+  margin: 0;
+
+}
+
+
+
+div.cv-modal-description {
+
+  width: 60%;
+
+  line-height: 1.25;
+
+  font-size: 24px;
+
+  margin: 46px 0 0 0;
+
+  padding: 0 0 0 20px;
+
+}
+
+
+
+.cv-modal-description a {
+
+  display: inline-block;
+
+  margin: 10px 0 0 0;
+
+  color: #fff;
+
+}
+
+
+
+.cv-modal-description a:before {
+
+  content: '';
+
+  display: inline-block;
+
+  width: 54px;
+
+  height: 54px;
+
+  background: url(/wp-content/themes/lucidica/images//link-cv-white.png) center no-repeat;
+
+  margin: 0 10px 0 0;
+
+  position: relative;
+
+  top: 18px;
+
+}
+
+
+
+@media only screen and (max-width: 1000px),
+
+only screen and (max-device-width: 1000px) {
+
+  .modal-content {
+
+    padding: 20px 20px 40px 20px;
+
+    transform: translate(-50%, 0);
+
+    top: 50px;
+
+  }
+
+
+
+  .cv-modal-title,
+
+  div.cv-modal-description {
+
+    width: 100%;
+
+    padding: 0;
+
+    font-size: 18px;
+
+  }
+
+
+
+  .cv-modal-title h3 {
+
+    font-size: 22px;
+
+    width: 70%;
+
+  }
+
+
+
+  .cv-modal-title p { font-size: 18px; }
+
+
+
+}
+
+
+
+/* END CALL TO ACTION AND MODAL */
+
+
+
+/* END CV */

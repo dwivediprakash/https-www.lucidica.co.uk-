@@ -1,0 +1,116 @@
+@font-face {
+ font-family: "Open Sans";
+ src: url("OpenSans.ttf") format("ttf");
+        
+}
+.style4 {
+  font-family: 'Open Sans', sans-serif;
+ 
+}
+.style5 {
+  color: #1C3F94;
+  font-weight: bold;
+}
+.style6 { color: #000;}
+
+.hover-item {
+  cursor: pointer;
+}
+tr{
+  transition: all 1s;
+}
+ .tr_hover:hover {
+  cursor: pointer;
+  background-color: #56adf1;
+  transition: all 1s;
+}
+/*input:hover{
+cursor: pointer;
+}*/
+.input_padding{
+  padding-left: 2%;
+  color: #56adf1;
+}
+.name, .email, .position{
+  margin: 0 auto 20px;
+}
+#form_ajax_sending{
+  margin: 0;
+}
+.send_ajax{
+  transition: all 1s;
+  
+}
+.send_ajax:hover{
+  transition: all 1s;
+  transform: scale(1.2);
+  color: #fff;
+  font-weight: 600;
+}
+.label_name{
+  color: #fff;
+  font-size: 18px;
+}
+.my_input{
+  width:100%;
+  border: 2px solid #56adf1;
+  background: #292929;
+  border-radius: 10px;
+  height: 30px;
+  font-size: 18px;
+  font-family: "Montserrat";
+  /*text-transform: uppercase;*/
+  color: #56adf1;
+}
+
+.my_submit{
+  font-family: Helvetica, sans-serif;
+  font-size: 17px;
+  margin: 10px 0;
+  border: none;
+  background-color: #56adf1;
+  border-radius: 25px;
+  padding: 10px 50px;
+  transition: all 1s;
+}
+.my_submit:hover{
+  transition: all 1s;
+  transform: scale(1.2);
+  color: #fff;
+  font-weight: 600;
+}
+table>tbody>tr>td:nth-child(2){
+  padding-left: 2%;
+}
+table>tbody>tr>td:nth-child(3){
+  vertical-align: middle!important;
+}
+table>tbody>tr>td:nth-child(4){
+  vertical-align: middle!important;
+}
+#send input{
+  margin-top: 10px;
+}
+input{
+  outline: none;
+}
+input[type="radio"]:hover{
+  cursor: pointer;
+}
+
+.invalid{
+  border: 2px solid red;
+  color: red;
+}
+
+.valid{
+  border: 2px solid green;
+  color: green;
+}
+
+
+
+
+/*#send input{
+ 
+}*/

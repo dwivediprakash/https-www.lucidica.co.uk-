@@ -1,0 +1,235 @@
+html {
+  margin-top: 0 !important; }
+
+main {
+  padding-top: 50px; }
+
+.site-nav {
+  float: none !important; }
+
+@media (max-width: 1000px) {
+  .menu-toggle {
+    width: 80px; } }
+.site-nav li a {
+  color: #fff !important; }
+
+.section {
+  padding: 0 10px !important; }
+
+.spread.image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.section-item {
+  margin: 15px auto !important;
+  max-width: 1100px !important; }
+
+.section-item p {
+  text-align: center; }
+
+#wpadminbar {
+  display: none !important; }
+
+.section {
+  padding: 50px 10px;
+  border-bottom: 6px solid transparent !important; }
+
+.bg-image h1 {
+  color: #fff;
+  font-weight: 700; }
+
+ul li {
+  list-style-type: none; }
+
+.item_wrap p a {
+  color: #ff4000; }
+
+.user, .wrench, .coins, .news_paper, .users, .truck {
+  width: 100px; }
+
+.svg_wrap_user,
+.svg_wrap_truck,
+.svg_wrap_wrench,
+.svg_wrap_users,
+.svg_wrap_coins,
+.svg_wrap_news_paper {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.svg_wrap_user,
+.svg_wrap_truck {
+  background: #0B2B47; }
+
+.svg_wrap_wrench,
+.svg_wrap_users {
+  background: #FF4000; }
+
+.svg_wrap_coins,
+.svg_wrap_news_paper {
+  background: #52A0D3; }
+
+svg {
+  position: relative;
+  fill: #fff; }
+
+/*.wrench_h6{*/
+/*margin: 0 !important;*/
+/*}*/
+.heading, h3, h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+  color: #0B2B47; }
+
+.heading, h3 {
+  font-size: 36px; }
+
+h6 {
+  font-size: 20px;
+  margin: 20px !important; }
+
+.microsoft_wrap img {
+  width: 100%; }
+
+.item__row {
+  display: flex;
+  text-align: center;
+  margin: 50px 0; }
+
+.item__row > .item {
+  width: 33%; }
+
+.item h6 {
+  width: auto !important; }
+
+.item .p_wrap {
+  min-height: 100px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 20px; }
+
+.additionally .two-col {
+  width: 100%; }
+
+.additionally {
+  justify-content: center !important; }
+
+.column {
+  padding: 1% 10% !important; }
+
+/*.bg-dark-blue p {*/
+/*margin-top: 50px !important;*/
+/*}*/
+.check-list {
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap; }
+
+.check-list li {
+  width: 17%;
+  flex-grow: 0; }
+
+.dash {
+  width: 100%;
+  height: 5px;
+  border-bottom: 1px dotted #dddddd;
+  margin: auto; }
+
+.wpcf7-form {
+  max-width: 600px !important; }
+
+.quote-form-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
+.wpcf7-form-control-wrap.your-name,
+.wpcf7-form-control-wrap.your-email,
+span.wpcf7-form-control-wrap.company-name,
+span.wpcf7-form-control-wrap.phone,
+span.wpcf7-form-control-wrap.number-laptops,
+span.wpcf7-form-control-wrap.number-pcs,
+span.wpcf7-form-control-wrap.number-servers,
+span.wpcf7-form-control-wrap.number-nas {
+  width: 45%; }
+
+span.wpcf7-form-control-wrap.number-networkingequipment {
+  width: 97%; }
+
+.wpcf7-form textarea {
+  width: 97%; }
+
+p {
+  text-align: center; }
+
+.screen-reader-response {
+  text-align: center; }
+
+.pre_p {
+  display: none; }
+
+.progressbar { 
+  margin: 0 160px; }
+
+/**{*/
+/*background-color: #000!important;*/
+/*outline: 1px solid red!important;*/
+/*border: 1px solid red!important;*/
+/*}*/
+@media screen and (max-width: 992px) {
+  .additionally .column {
+    padding: 1% 1% !important; } }
+.bg-dark-blue .section-item {
+  padding: 0 0 40px 2%; }
+
+@media screen and (max-width: 768px) {
+  .check-list {
+    flex-direction: column;
+    height: auto; }
+
+  .bg-dark-blue p {
+    margin-top: 0 !important; }
+
+  .heading {
+    font-size: 40px; }
+
+  .item__row {
+    flex-direction: column;
+    align-items: center; }
+
+  .item__row > .item {
+    width: 100%; } }
+@media (max-width: 600px) {
+  .heading, h3 {
+    font-size: 30px; }
+
+  .quote-form-flex {
+    display: block; }
+
+  .wpcf7-form-control-wrap.your-name,
+  .wpcf7-form-control-wrap.your-email,
+  span.wpcf7-form-control-wrap.company-name,
+  span.wpcf7-form-control-wrap.phone,
+  span.wpcf7-form-control-wrap.number-laptops,
+  span.wpcf7-form-control-wrap.number-pcs,
+  span.wpcf7-form-control-wrap.number-servers,
+  span.wpcf7-form-control-wrap.number-nas,
+  span.wpcf7-form-control-wrap.number-networkingequipment {
+    width: 100%; }
+
+  span.wpcf7-form-control-wrap.your-message {
+    width: 90%;
+    margin: auto;
+    display: block; }
+
+  .wpcf7-form input {
+    margin: 10px 0; } }

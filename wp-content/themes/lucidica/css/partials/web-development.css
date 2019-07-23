@@ -1,0 +1,187 @@
+html {
+  margin-top: 0 !important; }
+
+main {
+  padding-top: 50px; }
+
+@media (max-width: 1000px) {
+  .menu-toggle {
+    width: 50px; } }
+#wpadminbar {
+  display: none !important; }
+
+.site-nav li a {
+  color: #fff !important; }
+
+h1.page-title {
+  margin-bottom: 15px; }
+
+.section {
+  padding: 0 10px;
+  border-bottom: 6px solid transparent !important; }
+
+.section__webdev a {
+  color: #FF4000 !important; }
+
+.section__webdev h1 {
+  text-align: center; }
+
+.section__webdev .orange {
+  color: #56adf1;
+  text-align: center; }
+
+.section-item {
+  margin: 0 auto !important; }
+
+.section-item p {
+  text-align: center; }
+
+.bg-image h1 {
+  color: #fff;
+  font-weight: 700; }
+
+.spread.image {
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+.header-block {
+  width: 90% !important; }
+
+.head-wrap {
+  border-bottom: 3px solid #FF4000; }
+
+.head-text {
+  text-align: center; }
+
+.head-text h1 {
+  color: #0B2B47;
+  margin: 15px !important; }
+
+.buttons {
+  width: 100%;
+  margin: 0 auto 28px;
+  text-align: center;
+  display: flex;
+  justify-content: center; }
+
+.head-button {
+  color: #fff;
+  background-color: #56ADF1;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 30px;
+  width: 22%;
+  margin: 0 10px; }
+
+.heading {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #56adf1;
+  text-transform: uppercase; }
+
+.dash {
+  width: 100%;
+  height: 3px;
+  border-bottom: 1px dotted #dddddd;
+  margin: 0 auto 2vh; }
+
+a.link-label.small {
+  color: #fff !important;
+  background-color: #56adf1; }
+
+.offer .title {
+  text-align: center; }
+
+.offer .heading {
+  color: #fff; }
+
+.offer p {
+  font-size: 14px !important;
+  min-height: 150px; }
+
+.offers-compare:before {
+  text-align: center; }
+
+.wrap {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px; }
+
+.security, .support {
+  width: 40%; }
+
+.form-flex {
+  display: flex;
+  justify-content: space-between; }
+
+.wpcf7-form-control-wrap.your-name,
+.wpcf7-form-control-wrap.your-email,
+.wpcf7-form-control-wrap.your-telephone,
+.wpcf7-form-control-wrap.your-subject {
+  width: 49%; }
+
+@media screen and (max-width: 1200px) {
+  .head-button {
+    width: 25%;
+    padding: 5px 25px; }
+
+  h1.page-title {
+    margin-bottom: 0; } }
+@media screen and (max-width: 992px) {
+  .head-button {
+    padding: 5px 20px; }
+
+  p {
+    padding: 0 2%; }
+
+  .offers-compare2 {
+    padding: 0 2%; } }
+@media screen and (max-width: 768px) {
+  .offer p {
+    min-height: auto; }
+
+  .form-flex {
+    display: block; }
+
+  .wpcf7-form-control-wrap.your-name,
+  .wpcf7-form-control-wrap.your-email,
+  .wpcf7-form-control-wrap.your-telephone,
+  .wpcf7-form-control-wrap.your-subject {
+    width: 100%; } }
+@media screen and (max-width: 600px) {
+  h1, .heading {
+    font-size: 25px; }
+
+  h1.page-title {
+    padding: 10px 6%; }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center; }
+
+  .head-button {
+    padding: 5px 5px;
+    margin: 2% 0;
+    width: 60%; }
+
+  .header-text h1 {
+    font-size: 30px !important; }
+
+  .header-block {
+    width: 100% !important; }
+
+  .support-security .wrap {
+    flex-direction: column; }
+
+  .security, .support {
+    width: 100%; } }
+@media screen and (max-width: 320px) {
+  .head-button {
+    width: 80%; }
+
+  .offer2 > .head-text {
+    font-size: 25px; } }
+
+/*# sourceMappingURL=web-development.css.map */

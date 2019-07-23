@@ -1,0 +1,85 @@
+/*
+Error: Invalid CSS after "..., $wrap: unset)": expected "}", was "p {"
+        on line 73 of pages/_homepage.scss
+        from line 22 of main.scss
+
+68:       }
+69:       .second-block {
+70:         width: 70%;
+71:         min-height: 71vh;
+72:         @include displayFlex($direction: column, $align: space-between, $wrap: unset)
+73:         p {
+74:           width: 100%;
+75:           line-height: 36px;
+76:         }
+77:         img {
+78:           background-repeat: no-repeat;
+
+Backtrace:
+pages/_homepage.scss:73
+main.scss:22
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/scss/parser.rb:1278:in `expected'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/scss/parser.rb:1208:in `expected'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/scss/parser.rb:1203:in `tok!'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/scss/parser.rb:679:in `block'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/scss/parser.rb:747:in `declaration_or_ruleset'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/scss/parser.rb:697:in `block_child'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/scss/parser.rb:689:in `block_contents'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/scss/parser.rb:678:in `block'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/scss/parser.rb:747:in `declaration_or_ruleset'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/scss/parser.rb:697:in `block_child'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/scss/parser.rb:689:in `block_contents'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/scss/parser.rb:678:in `block'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/scss/parser.rb:747:in `declaration_or_ruleset'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/scss/parser.rb:697:in `block_child'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/scss/parser.rb:689:in `block_contents'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/scss/parser.rb:678:in `block'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/scss/parser.rb:670:in `ruleset'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/scss/parser.rb:696:in `block_child'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/scss/parser.rb:689:in `block_contents'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/scss/parser.rb:137:in `stylesheet'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/scss/parser.rb:41:in `parse'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/engine.rb:414:in `_to_tree'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/engine.rb:321:in `to_tree'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:323:in `block in visit_import'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/stack.rb:88:in `block in with_import'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/stack.rb:135:in `with_frame'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/stack.rb:88:in `with_import'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/stack.rb:135:in `with_frame'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/tree/root_node.rb:20:in `render'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/engine.rb:290:in `render'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/plugin/compiler.rb:464:in `update_stylesheet'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/plugin.rb:82:in `update_stylesheets'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/exec/sass_scss.rb:338:in `watch_or_update'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/exec/sass_scss.rb:51:in `process_result'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/exec/base.rb:50:in `parse'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/lib/sass/exec/base.rb:18:in `parse!'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.6.0/bin/scss:13:in `<top (required)>'
+C:/Ruby24-x64/bin/scss:23:in `load'
+C:/Ruby24-x64/bin/scss:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"..., $wrap: unset)\": expected \"}\", was \"p {\"\A         on line 73 of pages/_homepage.scss\A         from line 22 of main.scss\A \A 68:       }\A 69:       .second-block {\A 70:         width: 70%;\A 71:         min-height: 71vh;\A 72:         @include displayFlex($direction: column, $align: space-between, $wrap: unset)\A 73:         p {\A 74:           width: 100%;\A 75:           line-height: 36px;\A 76:         }\A 77:         img {\A 78:           background-repeat: no-repeat;"; }

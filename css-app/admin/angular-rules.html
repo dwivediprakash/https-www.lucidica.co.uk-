@@ -1,0 +1,977 @@
+<!-- Content -->
+
+1. Variables
+2. Controllers
+3. Factory (to bind two different controllers)
+4. Method in controller (functions)
+5. Nested controllers (display parent value if isn't current controller value)
+6. Controller as (true way to display variables)
+7. Directives (ability to add jquery code in Angular)
+8. Filters
+9. Restrics and template with ng-repeat in directives
+10. Transclude in directives
+11. TemplateURL and caching of templates in directives
+12. Binding controller with directive
+13. Scope true in directives (you can take variable from controller and safety change in directive)
+14. Isolated scope in directive
+15. Transclude element in directive
+16. Post sending and receiving data
+17. Emulating of backend using mockup (as previous code but necessary to add)
+18. Hide compilling of Angular
+19. Routing for app
+20. Tracing routing and creating mini blog
+
+<!-- Second tutorial -->
+21. Additionally services in Angular
+22. Injection of validation
+23. Types of binding and $filter function
+24. Directive in Angular (ng-if/show/hide, ng-repeat, ng-class)
+
+1. Variable
+
+<body ng-app="app">
+	<input type="text" ng-model="hello">
+	{{hello}}
+</body>
+
+
+-----
+2. Controllers
+
+<div ng-app="app" ng-controller="myCtrl">{{var}}</div>
+
+<script>
+var app = angular.module('app', []);
+
+app.controller('myCtrl', function($scope) {
+	$scope.var = 'My variable';
+});
+</script>
+
+
+-----
+3. Factory (to output data from factory to two different controllers)
+
+<div ng-app="app">
+	<div ng-controller="firstCtrl">{{myFactory}}</div>
+	<div ng-controller="secondCtrl">{{myFactory.hello}}</div>
+</div>
+
+<script>
+app.controller('firstCtrl', function($scope, myFactory) {
+	$scope.myFactory = myFactory;
+});
+
+app.controller('secondCtrl', function($scope, myFactory) {
+	$scope.myFactory = myFactory;
+});
+
+app.factory('myFactory', function() {
+	return {
+		hello: 'Hello World'
+	};
+});
+</script>
+
+
+-----
+4. Method in controller (functions)
+
+<div ng-app="app">
+	<div ng-controller="myCtrl">
+		{{hello}}
+		{{getBookmark()}}
+		<button ng-click="setHello('Foo')"></button>
+		<button ng-click="setHello('Bar')"></button>
+		{{myFactory.hello()}}
+	</div>
+</div>
+
+<script>
+app.controller('myCtrl', function($scope, myFactory) {
+	$scope.hello = 'Hello';
+
+	$scope.myFactory = myFactory;
+
+	$scope.getBookmart = function() {
+		return 'My bookmark';
+	};
+
+	$scope.setHello = function(text) {
+		$scope.hello = text;
+	};
+});
+
+app.factory('myFactory', function () {
+	return {
+		hello: function() {
+			return 'Factory Hello';
+		}
+	};
+});
+</script>
+
+
+-----
+5. Nested controllers (display parent value if isn't current controller value)
+
+<div ng-app="app">
+	<div ng-controller="myBooksCtrl">
+		<div ng-controller="angularBookCtrl">
+			<button ng-click="showbook()">Show Angular book</button>
+		</div>
+		<div ng-controller="emberBookCtrl">
+			<button ng-click="showbook()">Show Ember book</button>
+		</div>
+	</div>
+</div>
+
+<script>
+app.controller('myBookCtrl', function(){
+	$scope.showBook = function() {
+		console.log('My book');
+	};
+});
+
+app.controller('angularBookCtrl', function(){
+	$scope.showBook = function() {
+		console.log('This is Angular book');
+	};
+});
+
+app.controller('emberBookCtrl', function(){
+	$scope.showBook = function() {
+		//console.log('This is Ember book');
+	};
+});
+</script>
+
+
+
+-----
+6. Controller as (true way to display variables)
+
+<div ng-app="app">
+	<div ng-controller="mainCtrl as mainCtrlvar">
+		<div ng-controller="firstCtrl as firstCtrlvar">
+			<div ng-controller="secondCtrl as secondCtrlvar">
+				{{mainCtrlvar.myLesson}}
+				<button ng-click="mainCtrl.addLesson()"></button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+app.controller('mainCtrl', function() {
+	this.myLesson = 'Lesson';
+
+	this.addLesson = function() {
+		console.log('Add lesson');
+	};
+});
+
+app.controller('firstCtrl', function() {
+	this.myLesson = 'First lesson';
+});
+
+app.controller('secondCtrl', function() {
+	this.myLesson = 'Second lesson';
+});
+</script>
+
+
+-----
+7. Directives (ability to add jquery code in Angular)
+
+<div ng-app="app">
+	<div foo>foo</div>
+	<div foo>foo</div>
+	<div foo>foo</div>
+	<div foo>foo</div>
+	<div foo>foo</div>
+</div>
+
+<script>
+// short directive form
+app.directive('foo', function() {
+	return function(scope, element, attrs) {
+		console.log('This is my directive');
+	}
+});
+
+// normal form
+app.directive('foo', function() {
+	return {
+		link: function(scope, element, attrs) {
+			element.on('click', function() {
+				if (element.text() == 'foo') {
+					element.text('bar');
+				} else {
+					element.text('foo');
+				}
+			});
+		}
+	};
+});
+</script>
+
+
+-----
+8. Filters
+
+<div ng-app="app" ng-controller="myCtrl">
+	{{money1 | moneyFilter}}
+	{{money2 | moneyFilter}}
+	{{money3 | moneyFilter}}
+</div>
+
+<script>
+app.controller('myCtrl', function ($scope) {
+	$scope.money1 = '1.22$';
+	$scope.money2 = '$3.43';
+	$scope.money3 = '4.76';
+});
+
+app.filter('moneyFilter', function() {
+	return function(str) {
+		var lastChar = str.slice(-1),
+				firstChar = str.slice(0, 1),
+				slicedPart;
+
+		if (lastChar === '$' ) {
+			slicedPart = str.slice(0, str.length - 1);
+			return '$' + slicedPart;
+		} else if (firstChar === '$') {
+			return str;
+		} else {
+			return '$' + str;
+		}
+	};
+});
+</script>
+
+
+-----
+9. Restrics and template with ng-repeat in directives
+
+<div ng-app="app">
+	<div class="foo-bar"></div>
+	<foo-bar></foo-bar>
+	<div foo-bar></div>
+</div>
+
+<!-- directive: foo-bar -->
+
+<script>
+app.directive('fooBar', function () {
+	var bookmarks = [
+		{
+			id: 1,
+			name: 'AngularJS'
+		},
+		{
+			id: 2,
+			name: 'EmberJS'
+		},
+		{
+			id: 3,
+			name: 'ReactJS'
+		}
+	];
+
+	return {
+		restrict: 'EACM',
+		template: '<div ng-repaet="bookmark in myBookMarks">{{bookmark.name}}</div>',
+		link: function(scope, elements, attrs) {
+			console.log('fooBar');
+			scope.name = 'Sasha';
+			scope.myBookMarks = bookmarks;
+		}
+	}
+});
+</script>
+
+
+-----
+10. Transclude in directives
+
+<div ng-app="app">
+	<div ng-controller="mainCtrl">
+		<foo-bar>This is {{name}}</foo-bar>
+	</div>
+</div>
+
+<script>
+app.controller('mainCtrl', function($scope) {
+	$scope.name = 'Bob';
+});
+
+app.directive('fooBar', function() {
+	return {
+		restrict: 'E',
+		transclude: true,
+		template: 'My directive template <div ng-transclude></div>', // using template
+		link: function (scope, element, attrs, ctrl, transclude) {
+			console.log('My directive');
+			transclude(scope, function (clone, scope) {
+				console.log('!', clone, scope);
+				element.append(clone);
+			});
+		}
+	};
+});
+</script>
+
+
+-----
+11. TemplateURL and caching of templates in directives
+
+<foo-bar></foo-bar>
+
+<script>
+// How to cache templates
+app.run(function($templateCache) {
+	$templateCache.put('bookmarks.html', '<div ng-repeat="bookmark in bookmarks">{{bookmark.name}}</div>');
+});
+
+app.directive('fooBar', function() {
+	bookmarksJSON = [
+		{
+			id: 1,
+			name: 'test1'
+		},
+		{
+			id: 2,
+			name: 'test2'
+		}
+	];
+
+	return {
+		restrict: 'E',
+		templateUrl: 'bookmarks.html',
+		link: function(scope, element, attrs) {
+			scope.bookmarks = bookmarksJSON;
+		}
+	}
+});
+</script>
+
+
+-----
+12. Binding controller with directive
+
+<div ng-app="app">
+	<div ng-controller="mainCtrl">
+		{{hello}}
+		<post></post>
+	</div>
+</div>
+
+<script>
+app.controller('mainCtrl', function($scope) {
+	$scope.posts = [
+		{
+			name: 'About cats'
+		},
+		{
+			name: 'About dogs'
+		}
+	];
+
+	$scope.getPosts = function() {
+		return $scope.posts;
+	};
+});
+
+app.directive('post', function() {
+	return {
+		scope: false,
+		template: '<div ng-repeat="post in getPosts()">{{post.name}}</div>',
+		link: function(scope, element, attrs) {
+		}
+	};
+});
+</script>
+
+
+-----
+13. Scope true in directives (you can take variable from controller and safety change in directive)
+
+<div ng-app="app">
+	<div ng-controller="booksCtrl">
+		This is controller {{name}}
+		<book></book>
+	</div>
+</div>
+
+<script>
+app.controller('booksCtrl', function($scope) {
+	$scope.name = 'Harry';
+	console.log('scope from controller', $scope);
+});
+
+app.directive('book', function () {
+	return {
+		scope: true,
+		template: 'My name is {{name}} <input type="text" ng-model="name">',
+		link: function (scope, element, attrs) {
+			console.log('scope from directive', scope);
+			console.log(scope.name);
+		}
+	};
+});
+</script>
+
+
+-----
+14. Isolated scope in directive
+
+<div ng-app="app">
+	<div ng-controller="firstCtrl">
+		<div>My controller name is {{name}}</div>
+		<div>My controller color is {{color}}</div>
+		<button ng-click="reverse()">Reverse name</button>
+		--------------------------------------------------<br>
+		<foo-bar name="{{name}}" color="color" reverse="reverse()"></foo-bar>
+	</div>
+</div>
+
+<script>
+app.controller('firstCtrl', function ($scope) {
+	$scope.name = 'Harry';
+	$scope.color = '#333333';
+
+	$scope.reverse = function() {
+		$scope.name = $scope.name.split('').reverse().join('');
+	};
+});
+
+app.directive('name', function () {
+	return {
+		scope: {
+			name: '@', // take variable name from controller in isolated scope
+			color: '=', // duplex data binding
+			reverse: '&' // execute function from controller
+		},
+		link: function (scope, element, attrs) {
+			console.log('scope from directive');
+		}
+	};
+});
+</script>
+
+
+-----
+15. Transclude element in directive
+
+<div ng-app="app">
+	<form wrap-in="table">
+		<div><label>Email:</label><input type="text"></div>
+		<div><label>Password:</label><input type="password"></div>
+
+		<button>Submit</button>
+	</form>
+</div>
+
+<script type="text/ng-template" id="red">
+	<div class="red"></div>
+</script>
+
+<script type="text/ng-template" id="table">
+	<div>Header for table</div>
+</script>
+
+<script>
+app.directive('wrapIn', function($templateCache) {
+	return {
+		transclude: 'element',
+		link: function(scope, element, attrs, ctrl, transclude) {
+			var template = $templateCache.get(attrs.wrapIn);
+			var templateElement = angular.element(template);
+
+			transclude(scope, function(clone) {
+				element.after(templateElement.append(clone));
+			});
+		}
+	};
+});
+</script>
+
+
+-----
+16. Post sending and receiving data
+
+<div ng-app="app">
+	<div ng-controller="mainCtrl">
+		<input type="text" ng-model="bookName">
+		<input type="button" ng-click="addBook(book)" value="Add me new book please">
+		<div ng-repeat="book in books">
+			{{book.name}}
+		</div>
+	</div>
+</div>
+
+<!-- back-output.php -->
+<?php
+
+$servername = 'localhost';
+$username = 'root';
+$password = '';
+$dbname = 'angular';
+
+$conn = new mysqli( $servername, $username, $password, $dbname );
+
+if ( $conn->connect_error ) {
+  die( 'Connection failed: ' . $conn->connect_error );
+}
+
+$outp = array();
+
+$result = $conn->query( 'SELECT * FROM `books`' );
+
+while( $rs = $result->fetch_array( MYSQLI_ASSOC )) {
+	$outp[]['id'] = $rs[ 'id' ];
+	$outp[]['name'] = $rs[ 'name' ];
+}
+
+echo( json_encode($outp) );
+
+$conn->close();
+
+?>
+
+<!-- back-push.php -->
+<?php
+
+$data = json_decode(file_get_contents("php://input"));
+$book = $data->book;
+
+$servername = 'localhost';
+$username = 'root';
+$password = '';
+$dbname = 'angular';
+
+$conn = new mysqli( $servername, $username, $password, $dbname );
+
+if ( $conn->connect_error ) {
+  die( 'Connection failed: ' . $conn->connect_error );
+}
+
+$sql = "INSERT INTO books (name) VALUES ('$book')";
+
+if ($conn->query($sql) === TRUE) {
+	echo $book;
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+
+?>
+
+
+<script>
+app.controller('mainCtrl', function($http, $scope) {
+
+  function postQuery() {
+    $http({
+      method: 'POST',
+      url: 'http://angular:81/back-output.php'
+    }).then(function (result) {
+      console.log('success', result);
+      $scope.books = result.data;
+    }, function (error) {
+      console.log(error);
+    });
+  }
+
+  postQuery();
+
+	$scope.addBook = function (book) {
+  	$http({
+  	  method: 'POST',
+  	  url: 'http://angular:81/back-push.php',
+  	  data: {
+  	  	'book': $scope.bookName
+  	  }
+  	}).then(function (result) {
+			console.log('Success added book');
+			$scope.bookName = null;
+      postQuery();
+  	}, function (error) {
+			console.log('Error in adding book');
+  	});
+  }
+  
+});
+</script>
+
+
+-----
+17. Emulating of backend using mockup (as previous code but necessary to add)
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-mocks.js"></script>
+
+<script>
+var app = angular.module('app', ['ngMockE2E']);
+
+app.run(function($httpBackend) {
+
+	console.log('run app');
+	
+	var books = [
+		{
+			name: 'AngularJS'
+		},
+		{
+			name: 'ReguireJS'
+		},
+		{
+			name: 'Angular 2 JS'
+		}
+	];
+
+	$httpBackend.whenGET('http://angular:81/back-output.php').respond(200, books);
+
+	$httpBackend.whenPOST('http://angular:81/back-push.php').respond(function(method, url, data) {
+		var result = JSON.parse(data);
+		books.push(result);
+		return [200, result];
+	});
+
+});
+</script>
+
+
+-----
+18. Hide compilling of Angular
+
+<style>
+	[ng\:cloak],
+	[ng-cloak],
+	.ng-cloak { display: none; }
+</style>
+
+<body ng-cloak>
+	{{1+1}}
+
+	<script src="js/angular.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+
+-----
+19. Routing for app
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.5/angular-route.js"></script>
+
+<!-- index.html -->
+<a href="#/">Home</a>
+<a href="#/posts">Posts</a>
+<ng-view></ng-view>
+
+<!-- main.html -->
+<h1>Homepage</h1>
+{{model.message}}
+
+<script>
+var app = angular.module('app', ['ngRoute']);
+
+app.config(function($routeProvider) {
+	$routeProvider
+	.when('/'. {
+		templateUrl: 'home.html',
+		controller: 'homeCtrl'
+	})
+	.when('/posts', {
+		template: '<h1>Posts</h1>'
+	})
+});
+
+app.controller('homeCtrl', function(){
+	$scope.model = {
+		message: 'This is my message'
+	};
+});
+</script>
+
+
+-----
+20. Tracing routing and creating mini blog
+
+<script>
+var app = angular.module('app', ['ngRoute']);
+
+app.config(function($routeProvider) {
+  $routeProvider
+    .when('/', {
+      templateUrl: 'home.html',
+      controller: 'homeCtrl'
+    })
+    .when('/posts', {
+      templateUrl: 'posts.html',
+      controller: 'postsCtrl'
+    })
+    .when('/posts/:postId', {
+      templateUrl: 'post.html',
+      controller: 'postCtrl'
+    })
+    .otherwise({
+      template: '<h1>404 no such page</h1>'
+    })
+});
+
+app.run(function ($rootScope) {
+  
+  $rootScope.$on('$routeChangeStart', function (event, current, previous, reject) {
+    console.log('changestart', arguments);
+  });
+  
+  $rootScope.$on('$routeChangeSuccess', function (event, current, previous, reject) {
+    console.log('changesuccess', arguments);
+    $rootScope.currentPath = current.$$route.originalPath;
+  });
+});
+
+
+
+app.controller('pathCtrl', function () {
+  
+});
+
+
+
+app.controller('homeCtrl', function($scope) {
+  console.log('Ctrl');
+
+  $scope.model = {
+    message: 'This is my message'
+  };
+});
+
+
+
+app.controller('postsCtrl', function ($scope, postsFactory) {
+  console.log('Posts controller', postsFactory);
+
+  $scope.posts = postsFactory;
+});
+
+
+
+app.controller('postCtrl', function ($scope, $routeParams, postsFactory) {
+  var postId = Number($routeParams.postId); // Приведение к числу строки и вывод ID
+  $scope.post = _.findWhere(postsFactory, {id: postId}); // Поиск в массиве нужного ID
+});
+
+
+
+app.factory('postsFactory', function(){
+  return [
+    {
+      id: 1,
+      name: 'Why Angular JS is good'
+    },
+    {
+      id: 2,
+      name: 'Why Angular JS is good 2'
+    },
+    {
+      id: 3,
+      name: 'Why Angular JS is good 3'
+    },
+  ];
+});
+</script>
+
+<!-- Second tutorial -->
+
+-----
+21. Additionally services in Angular
+
+<script>
+app.controller('ctrl', function ($scope, $log, $filter) {
+  $scope.title = 'click';
+  $scope.titleUpper = $filter('uppercase')($scope.title);
+
+  $log.info($scope.titleUpper);
+  $log.error($scope.titleUpper);
+  $log.warn($scope.titleUpper);
+});
+</script>
+
+
+-----
+22. Injection of validation
+
+<div ng-app="app">
+	<div ng-controller="ctrl">
+		<form name="myForm">
+			<input type="text" ng-model="name" name="nameField" minlength="5" required>
+			<div ng-messages="myForm.nameField.$error">
+				<div class="alert alert-warning" ng-message="minlength">Минимальная длина 5 символов</div>
+				<div class="alert alert-danger" ng-message="required">Поля обязательное для заполнение</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+
+<script>
+var app = angular.module('app', [ngMessages]);
+
+app.controller('ctrl', function(){
+	
+});
+</script>
+
+
+-----
+23. Types of binding and $filter function
+
+<div ng-app="app">
+	<div ng-controller="ctrl">
+		<h1>My name is {{name}}. I work in {{company}}.</h1> <!-- Interpolation data binding -->
+		<input type="text" ng-model="handle"> <!-- Two way data binding -->
+		<h2>vk.com/{{handleLowerCase();}}</h2>
+	</div>
+</div>
+
+
+<script>
+app.controller('ctrl', function ($scope, $timeout, $filter) {
+	$scope.name = 'John';
+	$scope.company = 'Oracle';
+	$scope.handle = '';
+
+	$timeout(function () {$scope.company = 'Microsoft';});
+
+	$scope.handleLowerCase = function () {
+		return $filter('lowercase')($scope.handle);
+	};
+});
+</script>
+
+
+-----
+24. Directive in Angular (ng-if/show/hide, ng-repeat, ng-class)
+
+<div ng-app="app">
+	<div class="container">
+		<div ng-controller="ctrl">
+			<input type="text" ng-model="handle">
+			<h2>vk.com/{{ handleLowerCase() }}</h2>
+
+			<div class="alert" ng-class="{ warning: record.engineer.length < 2, danger: record.mail == 'sharp131996@gmail.com' || record.mail.length < 2 }" ng-repeat="record in customerRecords.data">
+				<div ng-show="handle.length < charactersCount">You have typed less than 5 characters</div>
+				<div ng-show="handle.length > charactersCount">You have typed more than 5 characters</div>
+			</div>
+
+			<ul ng-repeat="rule in rules">
+				<li>{{ rule.rulename }}</li>
+			</ul>
+
+			<div class="alert alert-warning" ng-if="handle.length !== charactersCount">
+				<h2>Must be 5 characters!</h2>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script>
+app.controller('ctrl', function ($scope, $timeout, $filter) {
+	$scope.handle = '';
+	$scope.charactersCount = 5;
+
+	$scope.rules = [
+  	{
+  		rulename: 'First'
+  	},
+  	{
+  		rulename: 'Second'
+  	},
+  	{
+  		rulename: 'Third'
+  	}
+	];
+
+	$scope.handleLowerCase = function () {
+		return $filter('lowercase')($scope.handle);
+	};
+});
+</script>
+
+
+-----
+25. Service in Angular (to bind data between two controllers)
+
+<div ng-controller="myCtrl">
+	<input type="text" ng-model="text">
+	<button ng-click="insertNewEmpl()">Foo</button>
+	{{count()}}
+
+	<div ng-repeat="emp in empl">
+		{{emp}}
+	</div>
+</div>
+
+<div ng-controller="mysecCtrl">
+	<input type="text" ng-model="text">
+	<button ng-click="insertNewEmpl()">Foo</button>
+	{{count()}}
+
+	<div ng-repeat="emp in empl">
+		{{emp}}
+	</div>
+</div>
+
+<script>
+app.service('myService', function() {
+	var self = this;
+
+	this.empl = [];
+
+	this.insertEmpl = function(empName){
+		self.empl.push(empName);
+	}
+
+	this.empCount = function(){
+		return self.empl.length;
+	}
+});
+
+
+app.controller('myCtrl', function($scope, myService) {
+	$scope.hello = 'Hello';
+	$scope.text = '';
+	$scope.empl = myService.empl;
+
+	$scope.insertNewEmpl = function() {
+		myService.insertEmpl($scope.text);
+		$scope.text = '';
+	};
+	
+	$scope.count = function() {
+		return myService.empCount();
+	};
+});
+
+
+app.controller('mysecCtrl', function($scope, myService) {
+	$scope.hello = 'Hello';
+	$scope.text = '';
+	$scope.empl = myService.empl;
+
+	$scope.insertNewEmpl = function() {
+		myService.insertEmpl($scope.text);
+		$scope.text = '';
+	};
+	
+	$scope.count = function() {
+		return myService.empCount();
+	};
+});
+</script>

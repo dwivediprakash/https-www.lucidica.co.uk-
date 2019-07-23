@@ -1,0 +1,197 @@
+.dn{
+    display: none;
+
+}
+/* layout */
+.grid {
+    display: grid;
+    /*grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));*/
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /*grid-auto-rows: 30rem;*/
+    grid-gap: 16px;
+    grid-auto-flow: dense;
+}
+.grid--big-columns {
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+}
+.grid--big-gap {
+    grid-gap: 2.5rem;
+}
+/* styling */
+.card--expanded {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.card--expanded .card--wrap .card__img {
+    transform: scale(1.2);
+    /*Max width / transition*/
+    /*transition: all 0.5s;*/
+    /*max-width: 720px;*/
+    max-width: 100%;
+}
+.card.card--expanded .text-wrap{
+    padding: 10px 0 5px 10px;
+    position: relative;
+    /*position: absolute;*/
+    /*bottom: 30px;*/
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.4s forwards;
+    animation-delay: 0.3s;
+}
+.card {
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+}
+.card--wrap{
+    /*position: absolute;*/
+    /*bottom: 10px;*/
+    /*z-index: 1000;*/
+    /*width: 100%;*/
+    /*text-align: center;*/
+}
+/*.card--wrap:before{*/
+    /*content: '';*/
+    /*display: block;*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*!*background: rgba(255, 255, 255, 0);*!*/
+    /*background: rgb(255, 255, 255);*/
+    /*z-index: -1;*/
+/*}*/
+.card--wrap .text-wrap{
+    padding: 0 0 5px 10px;
+    background-color: #fff;
+}
+.card--wrap .text-wrap .name,
+.card--wrap .text-wrap .position{
+    color: #0b2b47;
+    text-transform: uppercase;
+    text-align: left;
+}
+.card--wrap .text-wrap .name{
+    font-weight: bold;
+}
+.card--wrap .text-wrap .position{
+
+}
+.card--wrap .text-wrap .card--links{
+    display: flex;
+    justify-content: flex-start;
+}
+.card--wrap .text-wrap .card--links .profile{
+
+}
+.card--wrap .text-wrap .card--links .profile a,
+.card--wrap .text-wrap .card--links .email a{
+    color: #FF4000;
+    font-weight: normal;
+}
+.card--wrap .text-wrap .card--links .email{
+    margin-left: 10px;
+}
+
+.card__img {
+    transition: all 0.3s;
+    /*Max-width*/
+    /*max-width: 362px;*/
+    max-width:  100%;
+
+}
+body {
+    background-color: #191919;
+    color: lightgray;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.1rem;
+}
+.mb-4 {
+    margin-bottom: 1rem;
+}
+.p-4 {
+    padding: 1rem;
+}
+button {
+    padding: 0.75rem;
+    margin-right: 0.75rem;
+    background-color: #191919;
+    color: lightgray;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgba(212, 212, 212, 0.05);
+}
+button:focus {
+    box-shadow: 0 0 0 3px #7396e4;
+    outline: none;
+}
+a {
+    font-weight: bold;
+    color: #7396e4;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+code {
+    color: #7396e4;
+}
+/*Media*/
+@media only screen and (max-width: 1000px) {
+    .grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .card--wrap .text-wrap .position,
+    .card--wrap .text-wrap .card--links .profile a,
+    .card--wrap .text-wrap .card--links .email a{
+        font-size: 14px;
+    }
+    .card.card--expanded .card--wrap .text-wrap .position,
+    .card.card--expanded .text-wrap .card--links .profile a,
+    .card.card--expanded .text-wrap .card--links .email a{
+        font-size: 17px;
+    }
+    .card--wrap .text-wrap .card--links{
+        justify-content: space-around;
+    }
+    .card--wrap .text-wrap .card--links .email{
+        margin-left: 0;
+    }
+    .card--wrap .text-wrap{
+        padding: 0 0 5px 5px;
+    }
+}
+/*@media only screen and (max-width: 500px) {*/
+    /*.grid{*/
+        /*grid-template-columns: 1fr;*/
+    /*}*/
+/*}*/
+

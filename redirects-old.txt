@@ -1,0 +1,67 @@
+# http://www.lucidica.com/help/category/computer-health/
+# http://www.lucidica.com/help/category/email/
+# http://www.lucidica.com/help/category/chrome/
+# http://www.lucidica.com/help/category/iphone/
+# http://www.lucidica.com/help/category/mac/
+# http://www.lucidica.com/help/category/microsoft/
+# http://www.lucidica.com/help/category/network/
+# http://www.lucidica.com/help/category/other/
+# http://www.lucidica.com/help/category/outlook/
+# http://www.lucidica.com/help/category/ram/
+# http://www.lucidica.com/help/category/sharepoint/
+# http://www.lucidica.com/help/category/windows/
+# http://www.lucidica.com/help/category/windows-10/
+# http://www.lucidica.com/help/suggest-a-topic/
+# http://www.lucidica.com/help/search/
+# http://www.lucidica.com/help/all-posts/
+
+# http://www.lucidica.com/help/
+
+Redirect 301 /http://www.lucidica.com/help/windows-10-privacy/ /https://www.lucidica.co.uk/tech-help/os/windows-10/windows-10-privacy/
+Redirect 301 /http://www.lucidica.com/help/how-to-change-windows-10-start-up-programs/ /https://www.lucidica.co.uk/tech-help/os/windows-10/how-to-change-windows-10-start-up-programs/
+Redirect 301 /http://www.lucidica.com/help/how-to-use-windows-10-battery-saver-mode/ /https://www.lucidica.co.uk/tech-help/os/windows-10/how-to-use-windows-10-battery-saver-mode/
+Redirect 301 /http://www.lucidica.com/help/windows-10-how-to-repair-corrupted-windows-system-files/ /https://www.lucidica.co.uk/tech-help/os/windows-10/windows-10-how-to-repair-corrupted-windows-system-files/
+Redirect 301 /http://www.lucidica.com/help/windows-10-how-to-hide-the-cortana-search-box-from-the-taskbar/ /https://www.lucidica.co.uk/tech-help/os/windows-10/windows-10-how-to-hide-the-cortana-search-box-from-the-taskbar/
+Redirect 301 /http://www.lucidica.com/help/windows-10-a-look-at-the-new-command-prompt-features/ /https://www.lucidica.co.uk/tech-help/os/windows-10/windows-10-a-look-at-the-new-command-prompt-features/
+Redirect 301 /http://www.lucidica.com/help/os/windows-10/windows-10-virtual-desktops/ /https://www.lucidica.co.uk/tech-help/os/windows-10/windows-10-virtual-desktops/
+Redirect 301 /http://www.lucidica.com/help/windows-10-disc-clean-up-previous-window-installations/ /https://www.lucidica.co.uk/tech-help/os/windows-10/windows-10-disc-clean-up-previous-window-installations/
+Redirect 301 /http://www.lucidica.com/help/windows-10-new-keyboard-shortcuts/ /https://www.lucidica.co.uk/tech-help/os/windows-10/windows-10-new-keyboard-shortcuts/
+Redirect 301 /http://www.lucidica.com/help/windows-10-new-keyboard-shortcuts/ /https://www.lucidica.co.uk/tech-help/os/windows-10/windows-10-new-keyboard-shortcuts/
+Redirect 301 /http://www.lucidica.com/help/windows-10-offline-maps/ /https://www.lucidica.co.uk/tech-help/os/windows-10/windows-10-offline-maps/
+Redirect 301 /http://www.lucidica.com/help/windows-10-godmode/ /https://www.lucidica.co.uk/tech-help/os/windows-10/windows-10-godmode/
+Redirect 301 /http://www.lucidica.com/help/windows-10-contact-support-app/ /https://www.lucidica.co.uk/tech-help/os/windows-10/windows-10-contact-support-app/
+Redirect 301 /http://www.lucidica.com/help/how-to-turn-off-unnecessary-animations-in-windows/ /https://www.lucidica.co.uk/tech-help/os/windows/how-to-turn-off-unnecessary-animations-in-windows/
+Redirect 301 /http://www.lucidica.com/help/windows-10-how-to-change-the-recycle-bin-icon/ /https://www.lucidica.co.uk/tech-help/os/windows-10/windows-10-how-to-change-the-recycle-bin-icon/
+Redirect 301 /http://www.lucidica.com/help/windows-10-make-windows-explorer-open-to-pc-instead-of-the-new-quick-access/ /https://www.lucidica.co.uk/tech-help/os/windows-10/windows-10-make-windows-explorer-open-to-pc-instead-of-the-new-quick-access/
+Redirect 301 /http://www.lucidica.com/help/change-windows-10-search-engine-to-use-google-instead-of-bing/ /https://www.lucidica.co.uk/tech-help/os/windows-10/change-windows-10-search-engine-to-use-google-instead-of-bing/
+Redirect 301 /http://www.lucidica.com/help/mac-enable-spotlight-index-of-attatched-network-drives/ /https://www.lucidica.co.uk/tech-help/os/mac/mac-enable-spotlight-index-of-attatched-network-drives/
+Redirect 301 /http://www.lucidica.com/help/square-dot-error-connecting-to-mac-share-from-windows/ /https://www.lucidica.co.uk/tech-help/os/mac/square-dot-error-connecting-to-mac-share-from-windows/
+Redirect 301 /http://www.lucidica.com/help/enable-search-on-network-shard-drive/ /https://www.lucidica.co.uk/tech-help/os/mac/enable-search-on-network-shard-drive/
+Redirect 301 /http://www.lucidica.com/help/how-to-reset-forgotten-mac-password-without-logging-in/ /https://www.lucidica.co.uk/tech-help/os/mac/how-to-reset-forgotten-mac-password-without-logging-in/
+Redirect 301 /http://www.lucidica.com/help/how-to-fix-time-going-out-of-sync-on-a-domain-controller/ /https://www.lucidica.co.uk/tech-help/os/windows/how-to-fix-time-going-out-of-sync-on-a-domain-controller/
+Redirect 301 /http://www.lucidica.com/help/how-to-turn-your-out-of-office-on/ /https://www.lucidica.co.uk/tech-help/software/outlook/how-to-turn-your-out-of-office-on/
+Redirect 301 /http://www.lucidica.com/help/how-to-reset-your-office-365-password/ /https://www.lucidica.co.uk/tech-help/software/microsoft/how-to-reset-your-office-365-password/
+Redirect 301 /http://www.lucidica.com/help/mapping-sharepoint-as-a-network-drive-scrapped/ /https://www.lucidica.co.uk/tech-help/software/sharepoint/mapping-sharepoint-as-a-network-drive-scrapped/
+Redirect 301 /http://www.lucidica.com/help/how-to-delete-cookies/ /https://www.lucidica.co.uk/tech-help/software/chrome/how-to-delete-cookies/
+Redirect 301 /http://www.lucidica.com/help/how-to-set-up-outlook-on-an-android-phone/ /https://www.lucidica.co.uk/tech-help/software/outlook/how-to-set-up-outlook-on-an-android-phone/
+Redirect 301 /http://www.lucidica.com/help/how-to-import-export-bookmarks-from-chrome/ /https://www.lucidica.co.uk/tech-help/software/chrome/how-to-import-export-bookmarks-from-chrome/
+Redirect 301 /http://www.lucidica.com/help/sharepoint-error-the-drive-is-already-mapped-tips/ /https://www.lucidica.co.uk/tech-help/software/sharepoint/sharepoint-error-the-drive-is-already-mapped-tips/
+Redirect 301 /http://www.lucidica.com/help/outlook-stuck-on-loading-profile/ /https://www.lucidica.co.uk/tech-help/software/outlook/outlook-stuck-on-loading-profile/
+Redirect 301 /http://www.lucidica.com/help/red-x-error-when-opening-office365-attachments-in-chrome/ /https://www.lucidica.co.uk/tech-help/software/email/red-x-error-when-opening-office365-attachments-in-chrome/
+Redirect 301 /http://www.lucidica.com/help/mapping-sharepoint-as-a-network-drive/ /https://www.lucidica.co.uk/tech-help/software/sharepoint/mapping-sharepoint-as-a-network-drive/
+Redirect 301 /http://www.lucidica.com/help/gmail-undo-send-how-to-enable/ /https://www.lucidica.co.uk/tech-help/software/email/gmail-undo-send-how-to-enable/
+Redirect 301 /http://www.lucidica.com/help/unable-to-e-mail-btinternet-com-addresses/ /https://www.lucidica.co.uk/tech-help/software/email/unable-to-e-mail-btinternet-com-addresses/
+Redirect 301 /http://www.lucidica.com/help/how-to-revert-to-the-old-bookmark-manager-in-chrome/ /https://www.lucidica.co.uk/tech-help/software/chrome/how-to-revert-to-the-old-bookmark-manager-in-chrome/
+Redirect 301 /http://www.lucidica.com/help/err_quic_protocol_error/ /https://www.lucidica.co.uk/tech-help/software/chrome/err_quic_protocol_error/
+Redirect 301 /http://www.lucidica.com/help/easy-way-of-setting-up-office-365-emails-on-blackberry/ /https://www.lucidica.co.uk/tech-help/software/email/easy-way-of-setting-up-office-365-emails-on-blackberry/
+Redirect 301 /http://www.lucidica.com/help/how-to-defrag-your-hard-drive/ /https://www.lucidica.co.uk/tech-help/hardware/computer-health/how-to-defrag-your-hard-drive/
+Redirect 301 /http://www.lucidica.com/help/how-to-connect-your-printer-through-airprint/ /https://www.lucidica.co.uk/tech-help/hardware/iphone/how-to-connect-your-printer-through-airprint/
+Redirect 301 /http://www.lucidica.com/help/how-to-free-up-space-on-your-iphone/ /https://www.lucidica.co.uk/tech-help/hardware/iphone/how-to-free-up-space-on-your-iphone/
+Redirect 301 /http://www.lucidica.com/help/system-file-checker/ /https://www.lucidica.co.uk/tech-help/hardware/computer-health/system-file-checker/
+Redirect 301 /http://www.lucidica.com/help/how-the-task-manager-can-help-you/ /https://www.lucidica.co.uk/tech-help/hardware/computer-health/how-the-task-manager-can-help-you/
+Redirect 301 /http://www.lucidica.com/help/how-a-restart-helps-computer-issues/ /https://www.lucidica.co.uk/tech-help/hardware/computer-health/how-a-restart-helps-computer-issues/
+Redirect 301 /http://www.lucidica.com/help/got-sql-eating-up-ram/ /https://www.lucidica.co.uk/tech-help/hardware/ram/got-sql-eating-up-ram/
+Redirect 301 /http://www.lucidica.com/help/how-to-improve-your-wifi/ /https://www.lucidica.co.uk/tech-help/network/how-to-improve-your-wifi/
+Redirect 301 /http://www.lucidica.com/help/how-to-deploy-software-using-group-policy/ /https://www.lucidica.co.uk/tech-help/network/how-to-deploy-software-using-group-policy/
+Redirect 301 /http://www.lucidica.com/help/keys-in-the-wrong-place/ /https://www.lucidica.co.uk/tech-help/network/keys-in-the-wrong-place/
+Redirect 301 /http://www.lucidica.com/help/mac-osx-10-9-and-smb/ /https://www.lucidica.co.uk/tech-help/network/mac-osx-10-9-and-smb/

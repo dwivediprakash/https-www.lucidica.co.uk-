@@ -1,0 +1,93 @@
+/* START FAQ page */
+
+.page-id-7588 h1 {
+  text-align: center;
+  margin: 20px 0 0 0;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#modal-ready { padding: 3%; }
+
+.page-id-7588 #tertiary { display: none; }
+
+.blog-button { background: #b0b0b0; }
+
+/* END FAQ page */
+
+/* START FORMS */
+
+.interested-services { text-align: left; }
+
+.interested-services input[type="checkbox"]{
+	display: inline-block;
+	width: 10px;
+	margin: 0 10px 0 0;
+}
+
+.wpcf7-list-item { display: block; }
+
+.interested-services + br { display: none; }
+
+.text-740 {
+	margin: -10px 0 10px 0;
+	text-align: left;
+	font-size: 19px;
+}
+
+/* END FORMS */
+
+/* START 404 PAGE */
+
+#page-404 {
+  margin: 0 0 25px 0;
+}
+
+.error404 main {
+	position: relative;
+	top: 50px;
+}
+
+img.error404 {
+	width: 100%;
+	max-width: 50%;
+	display: block;
+	margin: 0 auto 20px auto;
+}
+
+.error404 .search-field {
+	display: block;
+	width: 50%;
+	margin: auto;
+	padding: 10px;
+}
+
+/* END 404 PAGE */
+
+
+/* START ABOUT US PAGE */
+
+.partner .scaled-image {
+	margin: 0 auto -40px auto;
+}
+
+/* END ABOUT US PAGE */
+
+/* START WHY CHOOSE US PAGE */
+
+.margin.section-title {
+	margin: 15px auto -35px auto;
+}
+
+/* END WHY CHOOSE US PAGE */
+
+#modal-ready {
+	padding: 0 3%;
+}
+
+.section.bg-dark-grey.content-bottom[role="complementary"] > .wrapper { padding: 30px 0 0 0; }
+
+h4 > a,
+h4 > a:hover { color: #FFF; }
+
+h4 > a:hover { text-decoration: none; }

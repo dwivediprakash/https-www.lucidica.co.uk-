@@ -1,0 +1,11 @@
+{
+  "name": "your-app",
+  "version": "0.0.1",
+  "scripts": {
+    "gulp": "gulp",
+    "minify": "gulp minify"
+  },
+  "devDependencies": {
+    "gulp-image": "^2.9.0"
+  }
+}

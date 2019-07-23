@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Grouch Regular';
+  src: url('Grouch Regular.eot');
+  src: url('Grouch Regular.eot?#iefix') format('embedded-opentype'),
+       url('Grouch Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Grouch';
+  src: url('Grouch.woff') format('woff'),
+       url('Grouch.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+

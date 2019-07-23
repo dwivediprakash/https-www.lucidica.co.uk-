@@ -1,0 +1,2 @@
+[30-Oct-2017 08:26:29 UTC] PHP Parse error:  syntax error, unexpected ''<br>'' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home/lucidica/public_html/css-app/mailing.php on line 29
+[30-Oct-2017 08:38:00 UTC] PHP Parse error:  syntax error, unexpected ''<br>;' (T_ENCAPSED_AND_WHITESPACE) in /home/lucidica/public_html/css-app/mailing.php on line 48
